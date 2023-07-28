@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Social Media | Website</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h2 class="logo">FakeBook</h2>
+        <div class="search-bar">
+          <i class="uil uil-search"></i>
+          <input
+            type="search"
+            placeholder="Search for someone..."
+            id="filter"
+          />
+        </div>
+
+        <div class="create">
+          <label class="btn btn-primary" for="create-post">Create</label>
+          <div class="profile-pic">
+            <img src="./images/profile-1.jpg" alt="Profile Pic 1" />
+          </div>
+        </div>
+        <ul id="result" class="user-list hide"></ul>
+      </div>
+    </nav>
+
+    <!-- Main-Section -->
+    <main>
+      <div class="container">
+        <!-- Left-side -->
+        <div class="left">
+          <a href="#" class="profile">
+            <div class="profile-pic">
+              <img src="./images/profile-1.jpg" alt="Profile Pic" />
+            </div>
+            <div class="handle">
+              <h4>Kim Wexler</h4>
+              <p class="text-muted">@kimwex142</p>
+            </div>
+          </a>
+
+          <!-- Side-Bar -->
+          <div class="sidebar">
+            <a href="#" class="menu-item active">
+              <span><i class="uil uil-home"></i></span>
+              <h3>Home</h3>
+            </a>
+            <a href="#" class="menu-item">
+              <span><i class="uil uil-compass"></i></span>
+              <h3>Explore</h3>
+            </a>
+            <a href="#" class="menu-item" id="notifications">
+              <span
+                ><i class="uil uil-bell"
+                  ><small class="notification-count">9+</small></i
+                ></span
+              >
+              <h3>Notifications</h3>
+              <div class="notifications-popup">
+                <div>
+                  <div class="profile-pic">
+                    <img src="./images/profile-2.jpg" alt="Pro Pic" />
+                  </div>
+                  <div class="notification-body">
+                    <strong>Dave Clark</strong> accepted your friend request
+                    <small class="text-muted">2 DAYS AGO</small>
+                  </div>
+                </div>
+                <div>
+                  <div class="profile-pic">
+                    <img src="./images/profile-3.jpg" alt="Pro Pic" />
+                  </div>
+                  <div class="notification-body">
+                    <strong>Asley Robins</strong> accepted your friend request
+                    <small class="text-muted">2 DAYS AGO</small>
+                  </div>
+                </div>
+                <div>
+                  <div class="profile-pic">
+                    <img src="./images/profile-4.jpg" alt="Pro Pic" />
+                  </div>
+                  <div class="notification-body">
+                    <strong>Shila Trushkin</strong> commented on your post
+                    <small class="text-muted">1 DAY AGO</small>
+                  </div>
+                </div>
+                <div>
+                  <div class="profile-pic">
+                    <img src="./images/profile-5.jpg" alt="Pro Pic" />
+                  </div>
+                  <div class="notification-body">
+                    <strong>Ammie Shwartz</strong> liked your post
+                    <small class="text-muted">2 DAYS AGO</small>
+                  </div>
+                </div>
+                <div>
+                  <div class="profile-pic">
+                    <img src="./images/profile-6.jpg" alt="Pro Pic" />
+                  </div>
+                  <div class="notification-body">
+                    <strong>Bela Senorita</strong> accepted your friend request
+                    <small class="text-muted">3 DAYS AGO</small>
+                  </div>
+                </div>
+                <div>
+                  <div class="profile-pic">
+                    <img src="./images/profile-7.jpg" alt="Pro Pic" />
+                  </div>
+                  <div class="notification-body">
+                    <strong>Natasha Shizman</strong> accepted your friend
+                    request
+                    <small class="text-muted">4 DAYS AGO</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="menu-item" id="messages-notifications">
+              <span
+                ><i class="uil uil-envelope-alt"
+                  ><small class="notification-count">6</small></i
+                ></span
+              >
+              <h3>Messages</h3>
+            </a>
+            <a href="#" class="menu-item">
+              <span><i class="uil uil-bookmark"></i></span>
+              <h3>Bookmarks</h3>
+            </a>
+            <a href="#" class="menu-item">
+              <span><i class="uil uil-chart-line"></i></span>
+              <h3>Analytics</h3>
+            </a>
+            <a href="#" class="menu-item">
+              <span><i class="uil uil-palette"></i></span>
+              <h3>Themes</h3>
+            </a>
+            <a href="#" class="menu-item">
+              <span><i class="uil uil-setting"></i></span>
+              <h3>Settings</h3>
+            </a>
+          </div>
+
+          <!-- Button -->
+          <label for="create-post" class="btn btn-primary">Create Post</label>
+        </div>
+
+        <!-- Middle-side -->
+        <div class="middle">
+          <!-- Stories -->
+          <div class="stories">
+            <div class="story">
+              <div class="profile-pic">
+                <img src="./images/profile-8.jpg" alt="Pro Pic" />
+              </div>
+              <p class="name">Your Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-pic">
+                <img src="./images/profile-9.jpg" alt="Pro Pic" />
+              </div>
+              <p class="name">Mathew Adams</p>
+            </div>
+            <div class="story">
+              <div class="profile-pic">
+                <img src="./images/profile-10.jpg" alt="Pro Pic" />
+              </div>
+              <p class="name">Amy Bubbles</p>
+            </div>
+            <div class="story">
+              <div class="profile-pic">
+                <img src="./images/profile-11.jpg" alt="Pro Pic" />
+              </div>
+              <p class="name">Martina Gonzalves</p>
+            </div>
+            <div class="story">
+              <div class="profile-pic">
+                <img src="./images/profile-12.jpg" alt="Pro Pic" />
+              </div>
+              <p class="name">Mary Johnson</p>
+            </div>
+            <div class="story">
+              <div class="profile-pic">
+                <img src="./images/profile-13.jpg" alt="Pro Pic" />
+              </div>
+              <p class="name">Rob Bubberman</p>
+            </div>
+          </div>
+
+          <!-- Create-Post -->
+          <form class="create-post">
+            <div class="profile-pic">
+              <img src="./images/profile-1.jpg" alt="Pro Pic" />
+            </div>
+            <input
+              type="text"
+              placeholder="What's on your mind, Kim?"
+              id="create-post"
+            />
+            <input type="submit" value="Post" class="btn btn-primary" />
+          </form>
+
+          <!-- Feeds -->
+          <div class="feeds">
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-pic">
+                    <img src="./images/profile-13.jpg" alt="" />
+                  </div>
+                  <div class="info">
+                    <h3>Lana Rhodes</h3>
+                    <small>Dubai, 13 MINUTES AGO</small>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+
+              <div class="photo">
+                <img
+                  data-id="1"
+                  loading="lazy"
+                  src="./images/feed-1.jpg"
+                  alt=""
+                />
+                <div class="loveMe"></div>
+              </div>
+
+              <div class="action-button">
+                <div class="interaction-buttons">
+                  <span><i class="fa-solid fa-thumbs-up"></i></span>
+                  <span><i class="uil uil-comment"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark"></i></span>
+                </div>
+              </div>
+
+              <div class="liked">
+                <span><img src="./images/profile-10.jpg" alt="" /></span>
+                <span><img src="./images/profile-4.jpg" alt="" /></span>
+                <span><img src="./images/profile-15.jpg" alt="" /></span>
+                <p>
+                  Liked by <strong class="addition">Mira Kuznov</strong> and
+                  <strong>389 others</strong>
+                </p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Lana Rhodes</strong> Just a casual evening here
+                  <span class="hash-tag">#lifestyle #chill</span>
+                </p>
+              </div>
+
+              <div class="comments text-muted">View all 127 comments</div>
+            </div>
+
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-pic">
+                    <img src="./images/profile-9.jpg" alt="" />
+                  </div>
+                  <div class="info">
+                    <h3>Ernie Rakim</h3>
+                    <small>Switzerland, 13 MINUTES AGO</small>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+
+              <div class="photo">
+                <img
+                  data-id="2"
+                  loading="lazy"
+                  src="./images/feed-2.jpg"
+                  alt=""
+                />
+                <div class="loveMe"></div>
+              </div>
+
+              <div class="action-button">
+                <div class="interaction-buttons">
+                  <span><i class="fa-solid fa-thumbs-up"></i></span>
+                  <span><i class="uil uil-comment"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark"></i></span>
+                </div>
+              </div>
+
+              <div class="liked">
+                <span><img src="./images/profile-13.jpg" alt="" /></span>
+                <span><img src="./images/profile-5.jpg" alt="" /></span>
+                <span><img src="./images/profile-7.jpg" alt="" /></span>
+                <p>
+                  Liked by
+                  <strong class="addition">Barbara Shananigan</strong> and
+                  <strong>462 others</strong>
+                </p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Ernie Rakim</strong> Who am I to judge myself
+                  <span class="hash-tag">#life #casual #care</span>
+                </p>
+              </div>
+
+              <div class="comments text-muted">View all 189 comments</div>
+            </div>
+
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-pic">
+                    <img src="./images/profile-14.jpg" alt="" />
+                  </div>
+                  <div class="info">
+                    <h3>Mary Johnson</h3>
+                    <small>London, 13 MINUTES AGO</small>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+
+              <div class="photo">
+                <img data-id="3" src="./images/feed-3.jpg" alt="" />
+                <div class="loveMe"></div>
+              </div>
+
+              <div class="action-button">
+                <div class="interaction-buttons">
+                  <span><i class="fa-solid fa-thumbs-up"></i></span>
+                  <span><i class="uil uil-comment"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark"></i></span>
+                </div>
+              </div>
+
+              <div class="liked">
+                <span><img src="./images/profile-8.jpg" alt="" /></span>
+                <span><img src="./images/profile-14.jpg" alt="" /></span>
+                <span><img src="./images/profile-18.jpg" alt="" /></span>
+                <p>
+                  Liked by <strong class="addition">John Wellington</strong> and
+                  <strong>444 others</strong>
+                </p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Mary Johnson</strong> Though Shou Love Mother Nature😇
+                  <span class="hash-tag">#beauty #nature</span>
+                </p>
+              </div>
+
+              <div class="comments text-muted">View all 142 comments</div>
+            </div>
+
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-pic">
+                    <img src="./images/profile-6.jpg" alt="" />
+                  </div>
+                  <div class="info">
+                    <h3>Isabella Khurshnov</h3>
+                    <small>Russia, 13 MINUTES AGO</small>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+
+              <div class="photo">
+                <img data-id="4" src="./images/feed-4.jpg" alt="" />
+                <div class="loveMe"></div>
+              </div>
+
+              <div class="action-button">
+                <div class="interaction-buttons">
+                  <span><i class="fa-solid fa-thumbs-up"></i></span>
+                  <span><i class="uil uil-comment"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark"></i></span>
+                </div>
+              </div>
+
+              <div class="liked">
+                <span><img src="./images/profile-2.jpg" alt="" /></span>
+                <span><img src="./images/profile-15.jpg" alt="" /></span>
+                <span><img src="./images/profile-12.jpg" alt="" /></span>
+                <p>
+                  Liked by <strong class="addition">Miranda Jones</strong> and
+                  <strong>499 others</strong>
+                </p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Isabella Khurshnov</strong> Chilling with my besties
+                  <span class="hash-tag">#friends #fun #trio</span>
+                </p>
+              </div>
+
+              <div class="comments text-muted">View all 123 comments</div>
+            </div>
+
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-pic">
+                    <img src="./images/profile-11.jpg" alt="" />
+                  </div>
+                  <div class="info">
+                    <h3>Kevin Edwards</h3>
+                    <small>Egypt, 13 MINUTES AGO</small>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+
+              <div class="photo">
+                <img data-id="5" src="./images/feed-5.jpg" alt="" />
+                <div class="loveMe"></div>
+              </div>
+
+              <div class="action-button">
+                <div class="interaction-buttons">
+                  <span><i class="fa-solid fa-thumbs-up"></i></span>
+                  <span><i class="uil uil-comment"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark"></i></span>
+                </div>
+              </div>
+
+              <div class="liked">
+                <span><img src="./images/profile-2.jpg" alt="" /></span>
+                <span><img src="./images/profile-3.jpg" alt="" /></span>
+                <span><img src="./images/profile-5.jpg" alt="" /></span>
+                <p>
+                  Liked by
+                  <strong class="addition">Barbara Wisconsin</strong> and
+                  <strong>190 others</strong>
+                </p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Kevin Edwards</strong> Blessed than a mofo😎
+                  <span class="hash-tag"> #thuglife #og #real</span>
+                </p>
+              </div>
+
+              <div class="comments text-muted">View all 27 comments</div>
+            </div>
+
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-pic">
+                    <img src="./images/profile-19.jpg" alt="" />
+                  </div>
+                  <div class="info">
+                    <h3>Jimmy Hoffa</h3>
+                    <small>USA, 51 MINUTES AGO</small>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+
+              <div class="photo">
+                <img data-id="6" src="./images/feed-6.jpg" alt="" />
+                <div class="loveMe"></div>
+              </div>
+
+              <div class="action-button">
+                <div class="interaction-buttons">
+                  <span><i class="fa-solid fa-thumbs-up"></i></span>
+                  <span><i class="uil uil-comment"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark"></i></span>
+                </div>
+              </div>
+
+              <div class="liked">
+                <span><img src="./images/profile-18.jpg" alt="" /></span>
+                <span><img src="./images/profile-14.jpg" alt="" /></span>
+                <span><img src="./images/profile-5.jpg" alt="" /></span>
+                <p>
+                  Liked by <strong class="addition">Hillary Benzua</strong> and
+                  <strong>739 others</strong>
+                </p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Jimmy Hoffa</strong> Speaking Computer's language is
+                  fun
+                  <span class="hash-tag">#programming #technology</span>
+                </p>
+              </div>
+
+              <div class="comments text-muted">View all 427 comments</div>
+            </div>
+
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-pic">
+                    <img src="./images/profile-7.jpg" alt="" />
+                  </div>
+                  <div class="info">
+                    <h3>Samantha Jones</h3>
+                    <small>USA, 33 MINUTES AGO</small>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+
+              <div class="photo">
+                <img data-id="7" src="./images/feed-7.jpg" alt="" />
+                <div class="loveMe"></div>
+              </div>
+
+              <div class="action-button">
+                <div class="interaction-buttons">
+                  <span><i class="fa-solid fa-thumbs-up"></i></span>
+                  <span><i class="uil uil-comment"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark"></i></span>
+                </div>
+              </div>
+
+              <div class="liked">
+                <span><img src="./images/profile-3.jpg" alt="" /></span>
+                <span><img src="./images/profile-4.jpg" alt="" /></span>
+                <span><img src="./images/profile-5.jpg" alt="" /></span>
+                <p>
+                  Liked by <strong class="addition">Jones Kirkmann</strong> and
+                  <strong>699 others</strong>
+                </p>
+              </div>
+
+              <div class="caption">
+                <p>
+                  <strong>Samantha Jones</strong> Office Life
+                  <span class="hash-tag">#goodvibes #work</span>
+                </p>
+              </div>
+
+              <div class="comments text-muted">View all 107 comments</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right-side -->
+        <div class="right">
+          <div class="messages">
+            <div class="heading">
+              <h4>Messages</h4>
+              <i class="uil uil-edit"></i>
+            </div>
+            <div class="search-bar">
+              <i class="uil uil-search"></i>
+              <input
+                type="search"
+                placeholder="Search messages"
+                id="message-search"
+              />
+            </div>
+            <div class="category">
+              <h6 class="active">Primary</h6>
+              <h6>Secondary</h6>
+              <h6 class="message-requests">Requests(7)</h6>
+            </div>
+
+            <div class="message">
+              <div class="profile-pic">
+                <img src="./images/profile-5.jpg" alt="" />
+                <div class="active"></div>
+              </div>
+              <div class="message-body">
+                <h5>Milo Keskeslu</h5>
+                <p class="text-bold">where've u been lately??</p>
+              </div>
+            </div>
+
+            <div class="message">
+              <div class="profile-pic">
+                <img src="./images/profile-7.jpg" alt="" />
+              </div>
+              <div class="message-body">
+                <h5>Daniella Jackson</h5>
+                <p class="text-muted">2 new messages</p>
+              </div>
+            </div>
+
+            <div class="message">
+              <div class="profile-pic">
+                <img src="./images/profile-9.jpg" alt="" />
+              </div>
+              <div class="message-body">
+                <h5>Dighima Makareva</h5>
+                <p class="text-bold">wussup man</p>
+              </div>
+            </div>
+            <div class="message">
+              <div class="profile-pic">
+                <img src="./images/profile-11.jpg" alt="" />
+                <div class="active"></div>
+              </div>
+              <div class="message-body">
+                <h5>Karlos Gonzalves</h5>
+                <p class="text-bold">lol u right</p>
+              </div>
+            </div>
+            <div class="message">
+              <div class="profile-pic">
+                <img src="./images/profile-12.jpg" alt="" />
+              </div>
+              <div class="message-body">
+                <h5>Juliet Makariva</h5>
+                <p class="text-bold">hi</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="friend-requests">
+            <h4>Requests</h4>
+            <div class="request">
+              <div class="info">
+                <div class="profile-pic">
+                  <img src="./images/profile-18.jpg" alt="" />
+                </div>
+                <div>
+                  <h5>Katrina Fidoro</h5>
+                  <p class="text-bold">8 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn btn-primary">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+            <div class="request">
+              <div class="info">
+                <div class="profile-pic">
+                  <img src="./images/profile-16.jpg" alt="" />
+                </div>
+                <div>
+                  <h5>Martha King</h5>
+                  <p class="text-bold">18 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn btn-primary">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+            <div class="request">
+              <div class="info">
+                <div class="profile-pic">
+                  <img src="./images/profile-8.jpg" alt="" />
+                </div>
+                <div>
+                  <h5>Alex Vladimir</h5>
+                  <p class="text-bold">2 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn btn-primary">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal">
+      <!-- Feed -->
+    </div>
+
+    <div class="" id="overlay"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
